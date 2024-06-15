@@ -1,0 +1,2 @@
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.damon.damonapi.clientsdk.DamonAPIClientConfig
+org.springframework.boot.autoconfigure.AutoConfiguration.imports=com.damon.damonapi.clientsdk.DamonAPIClientConfig

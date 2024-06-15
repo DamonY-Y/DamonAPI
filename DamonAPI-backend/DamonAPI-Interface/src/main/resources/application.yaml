@@ -1,0 +1,9 @@
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+
+damonapi:
+  client:
+    access-key: test
+    secret-key: abcdefg
