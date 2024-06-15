@@ -1,7 +1,7 @@
-# SDGs数据接口平台
+# SDGs data api
 @author:damon
 
-## 后端
+## backend
 
 * Spring Boot
 * MySQL Redis
