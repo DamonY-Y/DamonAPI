@@ -205,12 +205,6 @@ public class InterfaceInfoController {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
         }
         // todo: 判断该接口是否可以调用
-//        User user = new com.yupi.yuapiclientsdk.model.User();
-//        user.setUsername("test");
-//        String username = yuApiClient.getUsernameByPost(user);
-//        if (StringUtils.isBlank(username)) {
-//            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "接口验证失败");
-//        }
 //        // 仅本人或管理员可修改
         InterfaceInfo interfaceInfo = new InterfaceInfo();
         interfaceInfo.setId(id);

@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -63,6 +64,16 @@ public class User implements Serializable {
     private String secretKey;
 
     /**
+     * 剩余接口调用次数
+     */
+    private Long leftTime;
+
+    /**
+     * 账户余额
+     */
+    private BigDecimal leftMoney;
+
+    /**
      * 创建时间
      */
     private Date createTime;
@@ -101,6 +112,8 @@ public class User implements Serializable {
             && (this.getUserPassword() == null ? other.getUserPassword() == null : this.getUserPassword().equals(other.getUserPassword()))
             && (this.getAccessKey() == null ? other.getAccessKey() == null : this.getAccessKey().equals(other.getAccessKey()))
             && (this.getSecretKey() == null ? other.getSecretKey() == null : this.getSecretKey().equals(other.getSecretKey()))
+            && (this.getLeftTime() == null ? other.getLeftTime() == null : this.getLeftTime().equals(other.getLeftTime()))
+            && (this.getLeftMoney() == null ? other.getLeftMoney() == null : this.getLeftMoney().equals(other.getLeftMoney()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
             && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()))
             && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
@@ -119,6 +132,8 @@ public class User implements Serializable {
         result = prime * result + ((getUserPassword() == null) ? 0 : getUserPassword().hashCode());
         result = prime * result + ((getAccessKey() == null) ? 0 : getAccessKey().hashCode());
         result = prime * result + ((getSecretKey() == null) ? 0 : getSecretKey().hashCode());
+        result = prime * result + ((getLeftTime() == null) ? 0 : getLeftTime().hashCode());
+        result = prime * result + ((getLeftMoney() == null) ? 0 : getLeftMoney().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         result = prime * result + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         result = prime * result + ((getIsDelete() == null) ? 0 : getIsDelete().hashCode());
@@ -140,6 +155,8 @@ public class User implements Serializable {
         sb.append(", userPassword=").append(userPassword);
         sb.append(", accessKey=").append(accessKey);
         sb.append(", secretKey=").append(secretKey);
+        sb.append(", leftTime=").append(leftTime);
+        sb.append(", leftMoney=").append(leftMoney);
         sb.append(", createTime=").append(createTime);
         sb.append(", updateTime=").append(updateTime);
         sb.append(", isDelete=").append(isDelete);
