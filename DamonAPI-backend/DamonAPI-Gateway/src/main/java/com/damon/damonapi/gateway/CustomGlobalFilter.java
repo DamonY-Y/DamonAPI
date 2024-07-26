@@ -68,7 +68,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         ServerHttpResponse response = exchange.getResponse();
 
         // 黑名单 请求地址不在白名单中，response返回状态码
-        if (!IP_WHITE_LIST.contains(sourceAddress)){
+        if (!IP_WHITE_LIST.contains(sourceAddress)) {
             handleNoAuth(response);
         }
 
